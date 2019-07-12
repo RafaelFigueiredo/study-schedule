@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Study Schedule</title>
+     <!-- CSS
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- Favicon
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="js/cal-heatmap.min.js"></script>
+    <link rel="stylesheet" href="css/cal-heatmap.css" />
+
+
+    <link href='fullcalendar/core/main.css' rel='stylesheet' />
+    <link href='fullcalendar/daygrid/main.css' rel='stylesheet' />
+
+    <script src='fullcalendar/core/main.js'></script>
+    <script src='fullcalendar/daygrid/main.js'></script>
+
+    <script>
+
+        document.addEventListener('DOMContentLoaded', function() {
+          var calendarEl = document.getElementById('calendar');
+      
+          var calendar = new FullCalendar.Calendar(calendarEl, {
+            plugins: [ 'interaction', 'dayGrid' ],
+            header: {
+              left: 'prevYear,prev,next,nextYear today',
+              center: 'title',
+              right: 'dayGridMonth,dayGridWeek,dayGridDay'
+            },
+            defaultDate: '2019-06-12',
+            navLinks: true, // can click day/week names to navigate views
+            editable: true,
+            eventLimit: true, // allow "more" link when too many events
+            events: [
+              {
+                title: 'All Day Event',
+                start: '2019-06-01'
+              },
+              {
+                title: 'Long Event',
+                start: '2019-06-07',
+                end: '2019-06-10'
+              },
+              {
+                groupId: 999,
+                title: 'Repeating Event',
+                start: '2019-06-09T16:00:00'
+              },
+              {
+                groupId: 999,
+                title: 'Repeating Event',
+                start: '2019-06-16T16:00:00'
+              },
+              {
+                title: 'Conference',
+                start: '2019-06-11',
+                end: '2019-06-13'
+              },
+              {
+                title: 'Meeting',
+                start: '2019-06-12T10:30:00',
+                end: '2019-06-12T12:30:00'
+              },
+              {
+                title: 'Lunch',
+                start: '2019-06-12T12:00:00'
+              },
+              {
+                title: 'Meeting',
+                start: '2019-06-12T14:30:00'
+              },
+              {
+                title: 'Happy Hour',
+                start: '2019-06-12T17:30:00'
+              },
+              {
+                title: 'Dinner',
+                start: '2019-06-12T20:00:00'
+              },
+              {
+                title: 'Birthday Party',
+                start: '2019-06-13T07:00:00'
+              },
+              {
+                title: 'Click for Google',
+                url: 'http://google.com/',
+                start: '2019-06-28'
+              }
+            ]
+          });
+      
+          calendar.render();
+        });
+      
+      </script>
+
+
+</head>
+<body>
+        
+    <div class="container">
+            <div class="row">
+                    <h1>Study Schedule</h1>
+                    
+            </div>
+            <hr>
+            <div class="row" style="align-content: center">
+                    <h2>Minha Atividade</h2>
+                <div class="col-md-12" style="padding: 40px; margin-left: 60px;">
+
+                
+                <div id="cal-heatmap"></div>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-md-8">
+                    <h2>Agenda</h2>
+                    <div id='calendar'></div>
+                </div>
+                <div class="col-md-4" style="background-color:  rgb(230,240,250);"><h2>Avisos </h2>
+                    <div class="media">
+                            <img src="https://www.shareicon.net/download/2016/08/01/639857_internet_512x512.png" class="align-self-start mr-3" alt="..." width="48px">
+                            <div class="media-body">
+                              <h5 class="mt-0">Top-aligned media <span class="badge badge-danger">Prova</span></h5>
+                              <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
+                              
+                            </div>
+                    </div>
+
+                    <div class="media">
+                            <img src="https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Fimage.flaticon.com%2Ficons%2Fpng%2F512%2F852%2F852892.png&f=1" class="align-self-start mr-3" alt="..." width="48px">
+                            <div class="media-body">
+                              <h5 class="mt-0">Top-aligned media <span class="badge badge-warning">Trabalho</span></h5>
+                              <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
+                              
+                            </div>
+                    </div>
+
+
+                    <div class="media">
+                            <img src="https://proxy.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.newdesignfile.com%2Fpostpic%2F2013%2F01%2Fsuper-mario-bros-icons_156823.png&f=1" class="align-self-start mr-3" alt="..." width="48px">
+                            <div class="media-body">
+                              <h5 class="mt-0">Top-aligned media <span class="badge badge-info">Evento</span></h5>
+                              <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
+                            </div>
+                    </div>
+
+                    
+                    
+                    
+                </div>
+            </div>
+
+            
+        
+        
+    </div>
+</body>
+
+
+<script type="text/javascript">
+	var cal = new CalHeatMap();
+	cal.init({});
+</script>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</html>
