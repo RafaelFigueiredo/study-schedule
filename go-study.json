@@ -1,0 +1,37 @@
+{
+    "go-study": [
+      {
+        "Id": "lesson-01",
+        "Path": "class-A",
+        "Title": "Title 1",
+        "Tags": [
+          "Assunto 1",
+          "Assunto 2",
+          "Assunto 3"
+        ],
+        "Description": "f"
+      },
+      {
+        "Id": "lesson-02",
+        "Path": "class-A",
+        "Title": "Title 2",
+        "Tags": [
+          "Assunto 1",
+          "Assunto 2",
+          "Assunto 3"
+        ],
+        "Description": "f"
+      },
+      {
+        "Id": "lesson-03",
+        "Path": "class-A",
+        "Title": "Title 1",
+        "Tags": [
+          "Assunto 1",
+          "Assunto 2",
+          "Assunto 3"
+        ],
+        "Description": "f"
+      }
+    ]
+  }
